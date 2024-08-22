@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="content">
+
+  <div class="disc">
+    <h1>Welcome to MorseGen.</h1>
+    <h3>Decode and Encode Morse with Ease</h3>
+  </div>
+  <!-- BUTTONS -->
+  <div class="buttons">
+    <a href="{{ url_for('generator') }}" class="btn">Go to Generator</a>
+    <a href="{{ url_for('translator') }}" class="btn">Go to Translator</a>
+  </div>
+
+</div>
+
+
+{% endblock %}

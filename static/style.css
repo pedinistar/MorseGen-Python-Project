@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  width: 100%;
+  height: 100%;
+  padding: 20px 44px;
+  font-family: "Libre Baskerville";
+}
+
+.home{
+  width: 100%;
+  height: 100%;
+}
+
+.nav{
+  width: 100%;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.nav-links{
+  display: flex;
+  gap: 65px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: black;
+  position: relative; /* Necessary for positioning the underline */
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: rgba(103, 228, 0, 1);
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  transform: translateY(-2px); /* Slightly lift the link */
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+
+.btn{
+  background: linear-gradient(rgba(103, 228, 0, 1), rgba(78, 173, 0, 1));
+  border: none;
+  color: white;
+  padding: 20px 40px;
+  border-radius: 38px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease 0.2s;
+}
+
+.btn:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+
+.content{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 95px;
+}
+
+.disc{
+text-align: center;
+}
+
+.disc h1{
+  font-family: "League Spartan" ;
+  font-weight: bold;
+  font-size: 65px;
+  margin-bottom: 20px;
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.card{
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 60px 50px;
+  border-radius: 20px;
+}
+
+.content h1{
+  font-family: "League Spartan" ;
+  margin-bottom: 65px;
+}
+
+.card form{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 35px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+.card form button{
+  padding: 15px 20px;
+}
+
+
+.input , .input-p{
+  border-radius: 25px;                   /* Rounded corners */
+  border: 2px solid #ffffff;                /* Light gray border */
+  padding: 15px 20px;                  /* Padding inside the input box */
+  width: 200px;                          /* Width of the input box */
+  height: 40px;                          /* Height of the input box */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow with 2px Y-axis offset and 8px blur */
+  font-size: 16px;                       /* Font size inside the input box */
+  outline: none;                         /* Remove the default outline on focus */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition for focus effect */
+  width: 100%;
+  font-family: "Libre Baskerville";
+}
+
+.input-p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input:focus {
+  border-color: #55a862;                 /* Border color on focus */
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4); /* Enhanced shadow on focus */
+}
+
+.copy-btn {
+  background: transparent;               /* No background */
+  font-size: 18px;                       /* Font size for the icon */
+  cursor: pointer;                       /* Pointer cursor */
+  transition: color 0.3s ease;           /* Smooth color transition */
+  border: none;
+}
+
+form h5 {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f9fa; /* Light background color for the footer */
+}
+
+.footer-credit {
+  font-size: 14px;       /* Small font size */
+  color: #6c757d;        /* Subtle text color */
+  margin: 0;
+}
