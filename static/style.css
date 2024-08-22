@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Libre Baskerville";
+}
+
+html, body{
+  width: 100%;
+  height: 96%;
+}
+
+.home{
+  width: 100%;
+  height: 100%;
+  padding: 20px 30px;
+}
+
+nav {
+  margin-top: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+#check {
+  display: none;
+}
+
+#checkbtn {
+  cursor: pointer;
+  display: none;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  transition: color 0.3s ease;
+  font-family: "Libre Baskerville";
+  color: black;
+}
+
+ul li a:hover {
+  color: rgba(103, 228, 0, 1);
+}
+
+@media screen and (max-width: 805px) {
+  #list {
+    width: 100%;
+    height: 100vh;
+    background-color: #4cbb17;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    position: fixed;
+    top: 7rem;
+    left: 100%;
+    transition: all 1s;
+    z-index: 999;
+  }
+  
+  ul li a{
+    font-size: 25px;
+    transition: all 0.4s;
+    color:#ffffff;
+  }
+  
+  ul li a:hover {
+    color: rgb(0, 0, 0);
+  }
+
+  #check {
+    display: none;
+  }
+
+  #checkbtn {
+    display: block;
+  }
+
+  #check:checked ~ ul {
+    left: 0%;
+  }
+}
+
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 35px;
+}
+
+.button{
+  background: linear-gradient(rgba(103, 228, 0, 1), rgba(78, 173, 0, 1));
+  border: none;
+  color: white;
+  padding: 15px 35px;
+  border-radius: 38px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: box-shadow 0.2s ease 0.2s;
+}
+
+
+.button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow effect */
+}
+.disc{
+text-align: center;
+}
+
+.disc h1{
+  font-family: "League Spartan" ;
+  font-weight: bold;
+  font-size: 4rem;
+}
+
+.disc h1 span{
+  color: #4cbb17;
+  font-weight: bolder;
+}
+
+.disc h3{
+  color: #6c757d;
+  font-size: 18px;
+}
+
+
+.content{
+  width: 100%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 80px;
+}
+
+.card{
+  width: 500px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 60px 50px;
+  border-radius: 20px;
+}
+
+.content h1{
+  font-family: "League Spartan" ;
+  margin-bottom: 20px;
+}
+
+.card form{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 35px;
+}
+
+form label {
+  font-weight: bold;
+}
+
+.card form button{
+  padding: 15px 20px;
+}
+
+
+.input , .input-p{
+  border-radius: 25px;                   /* Rounded corners */
+  border: 2px solid #ffffff;                /* Light gray border */
+  padding: 15px 20px;                  /* Padding inside the input box */
+  width: 200px;                          /* Width of the input box */
+  height: 40px;                          /* Height of the input box */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); /* Shadow with 2px Y-axis offset and 8px blur */
+  font-size: 16px;                       /* Font size inside the input box */
+  outline: none;                         /* Remove the default outline on focus */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease; /* Smooth transition for focus effect */
+  width: 100%;
+  font-family: "Libre Baskerville";
+}
+
+.input-p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.input:focus {
+  border-color: #55a862;                 /* Border color on focus */
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.4); /* Enhanced shadow on focus */
+}
+
+.copy-btn {
+  background: transparent;               /* No background */
+  font-size: 18px;                       /* Font size for the icon */
+  cursor: pointer;                       /* Pointer cursor */
+  transition: color 0.3s ease;           /* Smooth color transition */
+  border: none;
+}
+
+body > div > div > div > h5 {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #f8f9fa; /* Light background color for the footer */
+}
+
+.footer-credit {
+  font-size: 14px;       /* Small font size */
+  color: #6c757d;        /* Subtle text color */
+  margin: 0;
+}
+
+
+
+@media (max-width: 768px) {
+  /* Adjustments for mobile view */
+  .button{
+    font-size: 15px;
+  }
+
+  .buttons{
+    gap: 20px;
+  }
+  
+  .card{
+    width: 400px;
+  }
+
+  .card h1{
+    font-size: 30px;
+    font-weight: 600;
+  }
+  
+  .card form{
+    gap: 10px;
+  }
+
+  .mt-btn{
+    margin-top: 20px;
+  }
+  
+  form label {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  
+  .input, .input-p{
+    font-size: 14px;
+  }
+  
+  body > div > div > div > h5{
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+}

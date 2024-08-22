@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="content">
+  <div class="card">
+    <h1>Morse Code Generator</h1>
+    <form action="{{ url_for('generator') }}" method="post">
+      <label for="text">Enter Text</label>
+      <input type="text" name="text" class="input">
+      <button type="submit" class="button mt-btn">Generate Morse Code</button>
+
+
+      <label for="code">Morse Code</label>
+      <p class="input-p" id="morse-code">{{ code }}</p>
+
+
+      <button type="button" class="copy-btn" onclick="copyText()">&#128203;</button> <!-- Clipboard symbol -->
+    </form>
+    <h5>Copy Code</h5>
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block scripts %}
+<!-- Add this script to handle the copy functionality -->
+<script>
+  function copyText() {
+    var morseCode = document.getElementById("morse-code").textContent;
+    navigator.clipboard.writeText(morseCode).then(function () {
+      alert('Morse code copied to clipboard!');
+    }, function (err) {
+      console.error('Could not copy text: ', err);
+    });
+  }
+</script>
+{% endblock %}
