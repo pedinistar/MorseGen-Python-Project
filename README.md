@@ -68,7 +68,3 @@ Feel free to fork this project and submit pull requests. Any improvements or sug
 ## 📜 License
 
 This project is open-source and available under the [MIT License](LICENSE).
-
-## 📧 Contact
-
-For any inquiries or suggestions, please reach out to me at [jayashreepedini14@yahoo.com](jayashreepedini14@yahoo.com).
