@@ -15,8 +15,16 @@ MORSE_CODE_DICT = {
 }
 
 from flask import Flask, render_template, request
+import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
+
 
 app = Flask(__name__)
+
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY')
 
 def convert_to_text(code):
   # Reversing the dictionary to get morse code as keys and characters as values
